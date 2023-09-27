@@ -7,7 +7,7 @@ public class User {
     public User(String login, String password, int age, String email) {
         this.login = login;
         this.password = password;
-        this.age = 18;
+        age = 18;
         this.email = email;
     }
 
@@ -43,5 +43,9 @@ public class User {
         System.out.println(login + email);
 
     }
+
+        public static User createAdmin(String login, String password, String email) {
+            return new User(login, password, 18, email); 
+        }
     
 }
